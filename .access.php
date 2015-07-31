@@ -1,0 +1,14 @@
+<?
+$PERM["local"]["2"]="D";
+$PERM["local"]["3"]="D";
+$PERM["local"]["4"]="D";
+$PERM["local"]["5"]="D";
+$PERM["bitrix"]["2"]="D";
+$PERM["bitrix"]["3"]="D";
+$PERM["bitrix"]["4"]="D";
+$PERM["bitrix"]["5"]="D";
+$PERM["/"]["2"]="R";
+$PERM["/"]["3"]="R";
+$PERM["/"]["4"]="R";
+$PERM["/"]["5"]="X";
+?>
