@@ -119,7 +119,17 @@ $(function () {
         $('.filter .filter-left ul>li').removeClass('active');
         $(this).toggleClass('active');
         event.preventDefault();
-    });        
+    });
+    
+    /*seo-text-hide*/
+    $('.seo-text').click(function(){
+        if($(this).hasClass('active')){
+            $(this).animate({'height':'250px'}, 500).removeClass('active');
+        }else{
+            $(this).animate({'height':'100%'}, 500).addClass('active');
+        }
+    });
+    
 });
 $(function () {
     $("#style-select, #style-select1, #style-select2").selectbox();

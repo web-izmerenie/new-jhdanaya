@@ -620,13 +620,17 @@ footer .social a {
 	margin-left: 8px;
 }
 .footer-middle .seo-text {
-	display: table-cell;
+	display: block;
 	padding-top: 42px;
 	padding-bottom: 42px;
 	vertical-align: middle;
 	text-align: left;	
 	font-size: 14px;
 	opacity: 0.2;
+	height: 250px;
+	overflow: hidden;
+	margin-bottom: 42px;
+	cursor: pointer;
 }
 .footer-bottom {
 	height: 45px;
