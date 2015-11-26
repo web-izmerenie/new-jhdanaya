@@ -76,7 +76,8 @@ if(defined('ERROR_404')){
     <div class="page <?=(defined('index') ? 'main-page' : 'inside-page')?>">
         <header class="header">
             <div class="logo">
-                <a <?=(defined('index') ? 'id="logo1"' : 'href="'.SITE_DIR.'" id="logo"')?>></a>
+                <a <?=(defined('index') ? 'id="logo1"' : 'href="'.SITE_DIR.'" id="logo"')?>
+									onclick="yaCounter26647785.reachGoal('LOGO'); return true;"></a>
             </div>
             <?if(!defined('ERROR_404')){?>
             <nav>

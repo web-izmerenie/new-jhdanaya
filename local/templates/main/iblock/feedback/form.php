@@ -12,8 +12,10 @@
                 <div class="line"><input type="text" name="form_text_7" placeholder="Имя" class="placeholder-1" required="required" data-placeholder="Имя" /></div>
                 <div class="line"><input type="email" name="form_email_8" placeholder="E-mail" class="placeholder-3" required="required" data-placeholder="E-mail" /></div>
                 <div class="line"><textarea class="placeholder-4" name="form_textarea_9" data-placeholder="Сообщение" placeholder="Сообщение" required="required"></textarea></div>
-                <div class="line-send"><input type="submit" value="Отправить" name="web_form_submit" class="btn-type-1" /></div>
-<?if(!$arParams['FORM_BODY']){?>                
+                <div class="line-send">
+									<input type="submit" value="Отправить" name="web_form_submit" class="btn-type-1" onclick="yaCounter26647785.reachGoal('WRITE_ME_SUB'); return true;"/>
+								</div>
+<?if(!$arParams['FORM_BODY']){?>
             </form>
         </div>
     </div>

@@ -49,14 +49,14 @@ if($photo_id){
 		$arSize = array('width'=>403, 'height'=>461);
 		$arSizePreview = array('width'=>301, 'height'=>344);
 	}
-    /*$arPhoto = array();    
-    $arPhoto['src'] = AIResizeImage($_SERVER['DOCUMENT_ROOT'].$arItem['DETAIL_PICTURE']['SRC'], $arSize['width'], $arSize['height']);                                                
-    $arPhotoPreview = array();    
+    /*$arPhoto = array();
+    $arPhoto['src'] = AIResizeImage($_SERVER['DOCUMENT_ROOT'].$arItem['DETAIL_PICTURE']['SRC'], $arSize['width'], $arSize['height']);
+    $arPhotoPreview = array();
     $arPhotoPreview['src'] = AIResizeImage($_SERVER['DOCUMENT_ROOT'].$arItem['DETAIL_PICTURE']['SRC'], $arSizePreview['width'], $arSizePreview['height']);*/
-    
-    $arPhoto = CFile::ResizeImageGet($photo_id, $arSize, BX_RESIZE_IMAGE_PROPORTIONAL, true, array());        
+
+    $arPhoto = CFile::ResizeImageGet($photo_id, $arSize, BX_RESIZE_IMAGE_PROPORTIONAL, true, array());
     $arPhotoPreview = CFile::ResizeImageGet($photo_id, $arSizePreview, BX_RESIZE_IMAGE_PROPORTIONAL, true, array());
-    $arPhotoReflection = PhotoReflection($_SERVER['DOCUMENT_ROOT'].$arPhotoPreview['src'], 134);   		
+    $arPhotoReflection = PhotoReflection($_SERVER['DOCUMENT_ROOT'].$arPhotoPreview['src'], 134);
 }
 ?>
 <div id="product_id" data-product-id="<?=$arItem['ID']?>" data-product-name="Арт. <?=$arItem['NAME']?>" class="product-card-wrapper clearfix">
@@ -68,16 +68,16 @@ if($photo_id){
                 <span class="full"></span>
                 <?foreach($arItem['DISPLAY_PROPERTIES']['LABEL']['VALUE'] as $value){?>
                     <span class="<?=$arLabel[$value]?>"></span>
-                <?}?>                
+                <?}?>
             </a>
         </div>
     </div>
     <div class="product-card-right">
         <div class="params">
             <p>Арт. <?=$arItem['NAME']?></p>
-            <?foreach($arProp as $arPropItem){?>                    
+            <?foreach($arProp as $arPropItem){?>
                 <p><?=$arPropItem?></p>
-            <?}?>                    
+            <?}?>
         </div>
         <div class="price">
             <?if($arItem['DISPLAY_PROPERTIES']['PRICE_OLD']['VALUE']){?>
@@ -98,14 +98,20 @@ if($photo_id){
         <div class="social">
             <div>
 				<?global $APPLICATION;?>
-                <div class="fb-like" data-href="<?=$APPLICATION->GetCurPage()?>" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>                    
-            </div>         
+                <div class="fb-like" data-href="<?=$APPLICATION->GetCurPage()?>" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+            </div>
             <div><a href="http://instagram.com/jhdanaya/" target="_blank"><img src="/img/instagram24_24.png" alt="" /></a></div>
         </div>
         <div class="btn-group">
-            <a href="#popup-1" class="btn-type-1 popup-open">Хочу в подарок!</a>
-            <a href="#popup-2" class="btn-type-1 popup-open">Заказать звонок</a>
-            <a href="#popup-3" class="btn-type-1 popup-open">Написать нам</a>
+            <a href="#popup-1" class="btn-type-1 popup-open" onclick="yaCounter26647785.reachGoal('SURPRICE_BUT'); return true;">
+							Хочу в подарок!
+						</a>
+            <a href="#popup-2" class="btn-type-1 popup-open" onclick="yaCounter26647785.reachGoal('CALL_ME_BUT'); return true;">
+							Заказать звонок
+						</a>
+            <a href="#popup-3" class="btn-type-1 popup-open" onclick="yaCounter26647785.reachGoal('WRITE_ME_BUT'); return true;">
+							Написать нам
+						</a>
         </div>
     </div>
 </div>
@@ -123,14 +129,14 @@ if($photo_id){
                     }else{
                         $arSize = array('width'=>178, 'height'=>235);
                     }
-                    /*$arPhoto = array();    
+                    /*$arPhoto = array();
                     $arPhoto['src'] = AIResizeImage($_SERVER['DOCUMENT_ROOT'].$arFile['SRC'], $arSize['width'], $arSize['height']);                     */
                     $arPhoto = CFile::ResizeImageGet($arRelative['DETAIL_PICTURE'], $arSize, BX_RESIZE_IMAGE_PROPORTIONAL_ALT, true, array());
-                    $arPhotoReflection = PhotoReflection($_SERVER['DOCUMENT_ROOT'].$arPhoto['src'], 50);                        
-                } 
+                    $arPhotoReflection = PhotoReflection($_SERVER['DOCUMENT_ROOT'].$arPhoto['src'], 50);
+                }
                 ?>
                 <li><a href="<?=$arRelative['DETAIL_PAGE_URL']?>"><img src="<?=$arPhotoReflection['src']?>" /></a></li>
-            <?}?>            
+            <?}?>
         </ul>
     </div>
 <?}?>
