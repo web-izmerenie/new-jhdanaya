@@ -10,7 +10,7 @@ global $wrapper_class;
 	    </div>
         <?}else if($wrapper_class != 'product-card-wrapper'){?>
                 </div>
-	    </div>	        
+	    </div>
         <?}?>
         <footer class="footer">
             <?if($wrapper_class != 'error-wrapper'){?>
@@ -29,9 +29,9 @@ global $wrapper_class;
                                 "ALLOW_MULTI_SELECT" => "N"
                             )
                         );
-                        ?>     
+                        ?>
                         <div class="social">
-                            <?$APPLICATION->IncludeComponent("bitrix:main.include", "", Array("AREA_FILE_SHOW" => "file", "AREA_FILE_SUFFIX" => "inc", "PATH" => SITE_DIR."include_areas/social_bottom.php"));?>                        
+                            <?$APPLICATION->IncludeComponent("bitrix:main.include", "", Array("AREA_FILE_SHOW" => "file", "AREA_FILE_SUFFIX" => "inc", "PATH" => SITE_DIR."include_areas/social_bottom.php"));?>
                         </div>
                     </div>
                 </div>
@@ -41,11 +41,11 @@ global $wrapper_class;
                 <?if($seo){?>
                     <div class="footer-middle">
                         <div class="wrapper">
-                            <div class="seo-text">                            
-                                <?=$seo?>                                
+                            <div class="seo-text">
+                                <?=$seo?>
                             </div>
                         </div>
-                    </div> 	
+                    </div>
                 <?}?>
             <?}?>
             <div class="footer-bottom clearfix">
@@ -57,7 +57,7 @@ global $wrapper_class;
                 </div>
             </div>
         </footer>
-    </div>        
+    </div>
     <?$APPLICATION->IncludeFile("iblock/gift/form.php")?>
     <?$APPLICATION->IncludeFile("iblock/call/form.php")?>
     <?$APPLICATION->IncludeFile("iblock/feedback/form.php")?>
@@ -67,6 +67,19 @@ global $wrapper_class;
     <?$APPLICATION->AddHeadScript(SITE_DIR.'js/form.js');?>
     <?$APPLICATION->AddHeadScript(SITE_DIR.'js/main.js');?>
     <?$APPLICATION->AddHeadScript('http://maps.googleapis.com/maps/api/js?sensor=false');?>
-    <?$APPLICATION->AddHeadScript(SITE_DIR.'js/map.js');?>    
+    <?$APPLICATION->AddHeadScript(SITE_DIR.'js/map.js');?>
 </body>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) { (w[c] = w[c] || []).push(function() {
+	try { w.yaCounter26647785 = new Ya.Metrika({ id:26647785, clickmap:true,
+		trackLinks:true, accurateTrackBounce:true, webvisor:true }); }
+		catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"),
+		f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript";
+		s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js";
+		if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); }
+		else { f(); } })(document, window, "yandex_metrika_callbacks");
+		</script> <noscript><div><img src="https://mc.yandex.ru/watch/26647785"
+			style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </html>

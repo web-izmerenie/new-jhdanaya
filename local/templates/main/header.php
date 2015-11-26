@@ -36,13 +36,14 @@ if(defined('ERROR_404')){
 <head lang="ru-RU">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <?$APPLICATION->ShowHead();?>		
-    <title><?$APPLICATION->ShowTitle();?></title>  
+    <?$APPLICATION->ShowHead();?>
+    <title><?$APPLICATION->ShowTitle();?></title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <meta name="description" content="">
     <meta name="format-detection" content="telephone=no">
     <?$APPLICATION->SetAdditionalCSS(SITE_DIR.'css/main.css')?>
     <?$APPLICATION->SetAdditionalCSS(SITE_DIR.'css/jquery.fancybox.css')?>
-    <?$APPLICATION->SetAdditionalCSS(SITE_DIR.'css/jquery.selectbox.css')?>    
+    <?$APPLICATION->SetAdditionalCSS(SITE_DIR.'css/jquery.selectbox.css')?>
 </head>
 <?global $USER;?>
 <body <?=($USER->IsAdmin() ? 'class="admin-mode"' : NULL)?>>
@@ -152,7 +153,7 @@ if(defined('ERROR_404')){
 						"AJAX_OPTION_ADDITIONAL" => ""
 						), false
 					);
-					?> 
+					?>
 				<?}else{?>
 					<?$APPLICATION->IncludeComponent("bitrix:menu", "submenu", Array(
 							"ROOT_MENU_TYPE" => "left",
@@ -167,7 +168,7 @@ if(defined('ERROR_404')){
 							"ALLOW_MULTI_SELECT" => "N"
 						)
 					);
-					?>      
+					?>
 				<?}?>
             </nav>
             <?}?>
@@ -177,10 +178,10 @@ if(defined('ERROR_404')){
 	    	<div class="error-wrapper-inr">
         <?}else if($wrapper_class != 'product-card-wrapper'){?>
             <div class="<?=$wrapper_class?>">
-                <?if($wrapper_class == 'salons-wrapper'){?>            
+                <?if($wrapper_class == 'salons-wrapper'){?>
                     <div id="map-container"></div>
-                    <div class="wrapper map-balloon">            
+                    <div class="wrapper map-balloon">
                 <?}else{?>
                     <div class="wrapper">
-                <?}?> 
-        <?}?>       
+                <?}?>
+        <?}?>
